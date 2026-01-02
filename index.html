@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Commerce Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2 id="greeting">Welcome!</h2>
+
+    <!-- Font Preference -->
+    <label for="fontSelect">Choose font:</label>
+    <select id="fontSelect">
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Verdana">Verdana</option>
+    </select>
+
+    <hr />
+
+    <!-- Login Section -->
+    <input type="text" id="usernameInput" placeholder="Enter your name" />
+    <button onclick="saveUser()">Save Name</button>
+
+    <hr />
+
+    <!-- Product Catalog -->
+    <h3>Products</h3>
+    <div class="products">
+      <div class="product">
+        <img src="images/apple.png" alt="Apple" />
+        <p>Apple - R5</p>
+        <button onclick="addToCart('Apple', 5)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/bread.png" alt="Bread" />
+        <p>Bread - R15</p>
+        <button onclick="addToCart('Bread', 15)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/milk.png" alt="Milk" />
+        <p>Milk - R12</p>
+        <button onclick="addToCart('Milk', 12)">Add to Cart</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Shopping Cart -->
+    <h3>Shopping Cart</h3>
+    <ul id="cartItems"></ul>
+    <p id="totalPrice">Total: R0</p>
+
+    <button onclick="clearCart()">Clear Cart & Reset Preferences</button>
+
+    <p id="cacheInfo"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
